@@ -5,12 +5,13 @@ url = input("Entrez l'URL de la vidéo à télécharger : ")
 
 # Options pour yt-dlp
 ydl_opts = {
-    'format': 'bestvideo+bestaudio/best',  # meilleure qualité vidéo + audio
-    'outtmpl': 'ma_video.%(ext)s',         # nom du fichier de sortie
-    'merge_output_format': 'mp4',          # force la conversion en mp4 si nécessaire
+    'format': 'bestvideo+bestaudio/best', 
+    'outtmpl': 'ma_video.%(ext)s',         
+    'merge_output_format': 'mp4',          
 }
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     ydl.download([url])
 
 print("Téléchargement et conversion terminés !")
+
